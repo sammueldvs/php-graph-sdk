@@ -81,7 +81,7 @@ class OAuth2ClientTest extends \PHPUnit_Framework_TestCase
 
         $this->assertContains('*', $authUrl);
 
-        $expectedUrl = 'https://www.facebook.com/' . static::TESTING_GRAPH_VERSION . '/dialog/oauth?';
+        $expectedUrl = 'https://facebook.com/' . static::TESTING_GRAPH_VERSION . '/dialog/oauth?';
         $this->assertTrue(strpos($authUrl, $expectedUrl) === 0, 'Unexpected base authorization URL returned from getAuthorizationUrl().');
 
         $params = [
